@@ -1,0 +1,25 @@
+.my-nav{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+.navbar {
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
+
+.navLink{
+height: auto;
+width: auto;
+display: flex;
+flex-direction: row;
+gap: 3rem;
+}

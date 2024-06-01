@@ -1,0 +1,85 @@
+/* Set global box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Register Hero Section */
+.login-hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+.login-form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    /* transition: box-shadow 1s ease; */
+    box-shadow: #000000 10px 10px 10px 5px;
+    width: 35%;
+    height: 40%;
+}
+
+
+/* Title Section */
+
+
+.login-title h1 {
+    font-size: 2rem;
+    color: #000000;
+}
+
+/* Form Styling */
+.login-hero form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 50%; */
+    /* width: 90%; */
+    /* max-width: 400px; */
+    /* background-color: #fff; */
+    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); */
+    /* padding: 2rem; */
+    gap: 1rem;
+}
+.login-hero Link{
+    color: #000;
+    text-decoration: none;
+}
+
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+    .register-hero {
+        padding: 2
+    }}
