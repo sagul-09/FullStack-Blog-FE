@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Send';
+import Nav from "../navbar/navComponent";
 // import Stack from '@mui/material/Stack';
 
-export default function Blog() {
+export default function HomeBlog() {
   const [Blogs, setBlogs] = useState([]);
     const [update, setUpdate] = useState([false]);
 
@@ -44,10 +45,11 @@ export default function Blog() {
 
   return (
     <div className="home-hero">
+      <Nav />
       <div className="blog-list">
         {Blogs &&
           Blogs.map((blog) => (
-            <div key={blog._id} className="blog" contentEditable={update?true:false}>
+            <div key={blog._id} className="blog">
               <h2>{blog.title}</h2>
               <p>Written by {blog.author.author} {blog.author.date}</p>
               <p>{blog.content}</p>
@@ -66,3 +68,4 @@ export default function Blog() {
     </div>
   );
 }
+

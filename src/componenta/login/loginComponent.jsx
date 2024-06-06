@@ -11,8 +11,10 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:2400/api/v1/users/login', { username, password });
+            const response = await axios.post('http://localhost:2400/api/v1/users/login', { username, password }, { withCredentials: true });
             console.log(response.data);
+            window.location.reload();  
+
         } catch (err) {
             console.error(err);
             if (err.response && err.response.status === 401) {

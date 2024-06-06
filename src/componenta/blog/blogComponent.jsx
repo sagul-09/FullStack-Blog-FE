@@ -1,6 +1,7 @@
 import './blog.css';
 import axios from 'axios';
 import { useState } from 'react';
+import Nav from '../navbar/navComponent';
 
 export default function Blog() {
     const [title, setTitle] = useState('');
@@ -28,6 +29,8 @@ export default function Blog() {
     };
 
     return (
+        <>        
+            <Nav/>
         <div className="blog-hero">
             <div className="add-block-box">
                 <div className="blog-title">
@@ -58,9 +61,13 @@ export default function Blog() {
                         value={content} 
                         onChange={(e) => setContent(e.target.value)} 
                     />
+                    <label>Upload Image:</label>
+                    <input type="file" />
                     <button type='submit'>Upload</button>
                 </form>
             </div>
         </div>
+        </>
+
     );
 }
